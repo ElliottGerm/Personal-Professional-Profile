@@ -1,0 +1,49 @@
+h1 {
+    color: grey;
+    font-family: 'Merriweather', serif;
+    font-size: 50px;
+    visibility: initial visible;
+}
+
+h2+table {
+    font-weight: bold;
+}
+
+h3~p {
+    text-align: justify;
+}
+
+img {
+    object-fit: contain;
+    transform: scaleY(.9);
+    filter: grayscale(20%);
+}
+
+.inline {
+    display: inline;
+}
+
+.hidden {
+    display: none;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+ul>li {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+section label {
+    font-weight: bold;
+}
+
+a:visited {
+    color: rgb(195, 0, 255);
+}
+
+ul::first-line {
+    text-transform: uppercase;
+}
