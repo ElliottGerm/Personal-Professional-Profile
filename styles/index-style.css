@@ -2,7 +2,7 @@ h1 {
     color: grey;
     font-family: 'Merriweather', serif;
     font-size: 50px;
-    visibility: initial visible;
+    visibility: initial;
 }
 
 h2+table {
