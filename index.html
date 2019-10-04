@@ -4,13 +4,22 @@ This work complies with the JMU honor code -->
 <html lang="en">
 
 <head>
+
+
+
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Personal Professional Profile</title>
     <link href="./styles/index-style.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Squada+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
+    <script src="./ppp.js"></script>
 </head>
+<!-- onload="addClass()" -->
 
-<body>
+<body onload="addClass(); removeClass()">
     <nav>
         <a href="./index.html">Home</a>
         <a href="./hobbies.html">Hobbies</a>
@@ -18,16 +27,16 @@ This work complies with the JMU honor code -->
         <a href="https://github.com/ElliottGerm" target="_blank" rel="external next">Git Hub</a>
         <a href="https://www.linkedin.com/in/elliott-germanovich-72649535" target="_blank" rel="external next">Linkedin</a>
     </nav>
-    <h1>Elliott Germanovich</h1>
-    <!-- <img src="./images/tux-pic-240w.jpg" alt="Elliott in a tux" /> -->
+    <h1 id="remove" class="name-heading">Elliott Germanovich</h1>
 
-    <img srcset="./images/tux-pic-240w.jpg 240w,
+    <img id="formal-pic" srcset="./images/tux-pic-240w.jpg 240w,
                ./images/tux-pic-480w.jpg 480w,
                ./images/tux-pic-600w.jpg 600w" sizes="(max-width: 500px) 220px,
          (max-width: 615px) 460px,
          600px" src="./images/tux-pic-600w.jpg" alt="Me in a suit">
     <div>
-        <h2>Personal History</h2>
+        <button class="change-text" type="button" onclick="change()">Go Away</button>
+        <h2 id="addClass">Personal History</h2>
         <p>My name is Elliott Theodore Germanovich. I was born in Virginia Beach VA. After graduating from Tallwood High School in Virginia Beach I got a job working at Best Buy and started attending community College at Tidewater Community College. In 2015
             I moved to Washington D.C. to live with my mom and finish my associates in Computer Science at the Northern Virginia Community College in Alexandria VA. After finishing community college I moved to Harrisonburg VA in order to attend James
             Madison University so that I could obtain my bachelors in Computer Science. I am currently a senior at JMU with one semster left. </p>
@@ -74,16 +83,16 @@ This work complies with the JMU honor code -->
     </div>
     <br>
     <hr>
-    <form>
+    <form name="myForm" onsubmit="return validateForm()">
         <div>
-            <section class="hidden">
+            <section>
                 <label for="name">What is your name?</label>
                 <input type="text" name="name" id="name" required>
             </section>
 
             <section>
                 <label for="email">What is your email?</label>
-                <input type="text" name="email" id="email" required>
+                <input type="text" name="email" id="email">
             </section>
         </div>
 
@@ -96,7 +105,8 @@ This work complies with the JMU honor code -->
             </section>
 
             <section>
-                <input type="submit" value="Submit">
+                <button><input type="submit" value="Submit" onclick="sendData({test:'ok'})"> </button>
+
             </section>
         </div>
 

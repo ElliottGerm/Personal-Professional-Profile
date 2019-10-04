@@ -1,4 +1,4 @@
-h1 {
+#name-heading {
     color: grey;
     font-family: 'Merriweather', serif;
     font-size: 50px;
@@ -47,3 +47,9 @@ a:visited {
 ul::first-line {
     text-transform: uppercase;
 }
+
+
+/* .addCSS {
+    color: #008000;
+    font-size: 20px;
+} */
